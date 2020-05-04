@@ -1,0 +1,25 @@
+{
+  "name": "ChromeExtensionBilibiliPlayerListExpand",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bilibili.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
